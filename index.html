@@ -118,16 +118,22 @@
       color: #4c1d95;
     }
 
-    .dashboard, .certificate {
+      .dashboard, .certificate {
       width: 100%;
-      max-height: 280px;
-      object-fit: contain;
+      height: 250px; /* Same fixed height for uniform size */
+      object-fit: contain; /* Show full image without cropping */
+      background-color: #f9f9ff; /* Light background to fill space */
       border-radius: 10px;
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
       margin: 12px 0;
       border: 1px solid #e0d3fc;
+      padding: 10px; /* Optional: gives breathing space inside image box */
     }
-
+    
+    .dashboard:hover {
+      transform: scale(1.02);
+    }
+    
     .image-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
